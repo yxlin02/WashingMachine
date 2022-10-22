@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class=" " style="font-size: 100px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Washing Machine System - Log in</title>
+    <link href="../static/css/font_422433_o1hgpuu91a9vn29.css" rel="stylesheet">
+    <link href="../static/css/antd.css" rel="stylesheet">
+    <link href="../static/css/animate.css" rel="stylesheet">
+    <link href="../static/css/logincss.css" rel="stylesheet">
+    <link href="../static/css/57dfe07294627fec0819c31cfd066038.css" rel="stylesheet">
+    <link href="../static/css/indexcss.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../static/css/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/jedate.css">
+</head>
+<body>
+<div><!---->
+    <div>
+        <div class="user-login" data-reactid=".0">
+            <div class="login-content" data-reactid=".0.0">
+                <h1 style="font-size: 40px;color: white">Washing Machine System</h1>
+                <div class="app-pic" style="max-height: 100%" id="app-pic" data-reactid=".0.0.1"><img
+                        src="../static/images/bg.jpg" data-reactid=".0.0.1.0">
+                </div>
+                <div class="login-panel" data-reactid=".0.0.2">
+                    <div class="login" data-reactid=".0.0.2.0">
+                        <form class="ant-form ant-form-horizontal" data-reactid=".0.0.2.0.0" action="/login"
+                              method="post">
+                            <div class="ant-row ant-form-item" data-reactid=".0.0.2.0.0.0">
+                                <div class="ant-form-item-control-wrapper" data-reactid=".0.0.2.0.0.0.$=1$wrapper">
+                                    <div class="ant-form-item-control " data-reactid=".0.0.2.0.0.0.$=1$wrapper.0"><span
+                                            class="login-input ant-input-affix-wrapper"
+                                            data-reactid=".0.0.2.0.0.0.$=1$wrapper.0.0:$/=10"><span
+                                            class="ant-input-prefix"
+                                            data-reactid=".0.0.2.0.0.0.$=1$wrapper.0.0:$/=10.0"><span
+                                            style="font-size:14px;"
+                                            data-reactid=".0.0.2.0.0.0.$=1$wrapper.0.0:$/=10.0.0">User:</span></span><input
+                                            class="ant-input ant-input-lg" placeholder="Enter User name" type="text" id="userName"
+                                            name="user_name"
+                                            data-__meta="[object Object]"
+                                            data-reactid=".0.0.2.0.0.0.$=1$wrapper.0.0:$/=10.1"></span></div>
+                                </div>
+                            </div>
+                            <div class="ant-row ant-form-item" data-reactid=".0.0.2.0.0.1">
+                                <div class="ant-form-item-control-wrapper" data-reactid=".0.0.2.0.0.1.$=1$wrapper">
+                                    <div class="ant-form-item-control " data-reactid=".0.0.2.0.0.1.$=1$wrapper.0"><span
+                                            class="login-input ant-input-affix-wrapper"
+                                            data-reactid=".0.0.2.0.0.1.$=1$wrapper.0.0:$/=10"><span
+                                            class="ant-input-prefix"
+                                            data-reactid=".0.0.2.0.0.1.$=1$wrapper.0.0:$/=10.0"><span
+                                            style="font-size:14px;"
+                                            data-reactid=".0.0.2.0.0.1.$=1$wrapper.0.0:$/=10.0.0">Password:</span></span><input
+                                            class="ant-input ant-input-lg" placeholder="Enter Your Password" type="password"
+                                            value="" name="password"
+                                            id="password" data-__meta="[object Object]"
+                                            data-reactid=".0.0.2.0.0.1.$=1$wrapper.0.0:$/=10.1"></span></div>
+                                </div>
+                            </div>
+                            <div class="ant-row ant-form-item" data-reactid=".0.0.2.0.0.2">
+                                <div class="ant-form-item-control-wrapper" data-reactid=".0.0.2.0.0.2.$=1$wrapper">
+                                    <div class="ant-form-item-control " data-reactid=".0.0.2.0.0.2.$=1$wrapper.0">
+                                        <button type="submit" class="ant-btn login-btn ant-btn-lg"
+                                                data-reactid=".0.0.2.0.0.2.$=1$wrapper.0.0:$/=10"
+                                        ><span
+                                                data-reactid=".0.0.2.0.0.2.$=1$wrapper.0.0:$/=10.1:$/=10">Log in</span>
+                                        </button>
+                                        <p class="to-register" style="text-align:center;"
+                                           data-reactid=".0.0.2.0.0.2.$=1$wrapper.0.0:$=11"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="edit-password" data-reactid=".0.0.2.0.1">
+                            <noscript data-reactid=".0.0.2.0.1.$1546577576372"></noscript>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function myfun() {
+        if ("{{ tmp }}"=="True") {
+            alert("Wrong Password!");
+        }
+    }
+
+    /*用window.onload调用myfun()*/
+    window.onload = myfun;//不要括号
+</script>
+</html>

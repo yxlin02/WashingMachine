@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/jeDate-test11.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/jedate11.css">
+    <script src="../static/js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.jedate.js"></script>
+    <script type="text/javascript" src="../static/js/jedate-test.js"></script>
+</head>
+<body background="../static/images/bg.jpg">
+<div>
+    <div style="font-size: 30px;text-align: center;color: gray;margin-top: 30px">Appointment</div>
+    <div style="margin: auto">
+        <form id="myForm" action="/subscribe" method="post">
+            <div class="jebody">
+                <div class="jewarp">
+                    <h3 class="gray">Set appointment</h3>
+                    <div class="content">
+                        <div class="jeitem">
+                            <label class="jelabel">Time:</label>
+                            <div class="jeinpbox">
+                                <input type="text" class="jeinput" id="test04" placeholder="YYYY-MM-DD hh:mm:ss"
+                                       name="startTime">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="jebody">
+                <div class="jewarp" style="text-align: center">
+                    <input type="submit" value="Confirm"
+                           style="width: 150px;height: 60px;font-size: 30px;border-radius: 5px;">
+                    <input type="button" value="Reset" onclick="formReset()"
+                           style="width: 150px;height: 60px;font-size: 30px;border-radius: 5px;margin-left: 55px">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function formReset() {
+        document.getElementById("myForm").reset()
+    }
+</script>
+</html>

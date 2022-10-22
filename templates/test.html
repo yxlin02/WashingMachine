@@ -1,0 +1,213 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>www.jb51.net js倒计时</title>#}
+{#    <style>#}
+{#        * {#}
+{#            margin: 0;#}
+{#            padding: 0;#}
+{#        }#}
+{##}
+{#        p {#}
+{#            font-size: 80px;#}
+{#            text-align: center;#}
+{#        }#}
+{##}
+{#        p span {#}
+{#            color: red;#}
+{#        }#}
+{##}
+{#        p span.time {#}
+{#            color: black#}
+{#        }#}
+{##}
+{#        body {#}
+{#            padding-top: 200px;#}
+{#        }#}
+{#    </style>#}
+{#</head>#}
+{#<body>#}
+{#<p>距离2019年还有</p>#}
+{#<p><span id="12121"></span></p>#}
+{#<p><span id="12122"></span></p>#}
+{#<p><span id="12123"></span></p>#}
+{#<p><span id="12124"></span></p>#}
+{#<script>#}
+{#    var oSpan = document.getElementById('12121');#}
+{#    function tow(n) {#}
+{#        if (n < 0) {#}
+{#            return "00"#}
+{#        }#}
+{#        return n >= 0 && n < 10 ? '0' + n : '' + n;#}
+{#    }#}
+{##}
+{#    function getDate() {#}
+{#        var oDate = new Date();//获取日期对象#}
+{#        var oldTime = oDate.getTime();//现在距离1970年的毫秒数#}
+{#        var newDate = new Date('2020/1/1 00:00:00');#}
+{#        var newTime = newDate.getTime();//2019年距离1970年的毫秒数#}
+{#        var second = Math.floor((newTime - oldTime) / 1000);//未来时间距离现在的秒数#}
+{#        var day = Math.floor(second / 86400);//整数部分代表的是天；一天有24*60*60=86400秒 ；#}
+{#        second = second % 86400;//余数代表剩下的秒数；#}
+{#        var hour = Math.floor(second / 3600);//整数部分代表小时；#}
+{#        second %= 3600; //余数代表 剩下的秒数；#}
+{#        var minute = Math.floor(second / 60);#}
+{#        second %= 60;#}
+{#        var str = tow(hour) + '<span class="time">小时</span>'#}
+{#            + tow(minute) + '<span class="time">分钟</span>'#}
+{#            + tow(second) + '<span class="time">秒</span>';#}
+{#        oSpan.innerHTML = str;#}
+{#    }#}
+{#    getDate();#}
+{#    setInterval(getDate, 1000);#}
+{#</script>#}
+{#<script>#}
+{#    var oSpan = document.getElementById('12122');#}
+{#    function tow(n) {#}
+{#        if (n < 0) {#}
+{#            return "00"#}
+{#        }#}
+{#        return n >= 0 && n < 10 ? '0' + n : '' + n;#}
+{#    }#}
+{##}
+{#    function getDate() {#}
+{#        var oDate = new Date();//获取日期对象#}
+{#        var oldTime = oDate.getTime();//现在距离1970年的毫秒数#}
+{#        var newDate = new Date('2020/01/02 00:00:00');#}
+{#        var newTime = newDate.getTime();//2019年距离1970年的毫秒数#}
+{#        var second = Math.floor((newTime - oldTime) / 1000);//未来时间距离现在的秒数#}
+{#        var day = Math.floor(second / 86400);//整数部分代表的是天；一天有24*60*60=86400秒 ；#}
+{#        second = second % 86400;//余数代表剩下的秒数；#}
+{#        var hour = Math.floor(second / 3600);//整数部分代表小时；#}
+{#        second %= 3600; //余数代表 剩下的秒数；#}
+{#        var minute = Math.floor(second / 60);#}
+{#        second %= 60;#}
+{#        var str = tow(hour) + '<span class="time">小时</span>'#}
+{#            + tow(minute) + '<span class="time">分钟</span>'#}
+{#            + tow(second) + '<span class="time">秒</span>';#}
+{#        oSpan.innerHTML = str;#}
+{#    }#}
+{#    getDate();#}
+{#    setInterval(getDate, 1000);#}
+{#</script>#}
+{#<script>#}
+{#    var oSpan = document.getElementById('12123');#}
+{#    function tow(n) {#}
+{#        if (n < 0) {#}
+{#            return "00"#}
+{#        }#}
+{#        return n >= 0 && n < 10 ? '0' + n : '' + n;#}
+{#    }#}
+{##}
+{#    function getDate() {#}
+{#        var oDate = new Date();//获取日期对象#}
+{#        var oldTime = oDate.getTime();//现在距离1970年的毫秒数#}
+{#        var newDate = new Date('2020/1/03 00:00:00');#}
+{#        var newTime = newDate.getTime();//2019年距离1970年的毫秒数#}
+{#        var second = Math.floor((newTime - oldTime) / 1000);//未来时间距离现在的秒数#}
+{#        var day = Math.floor(second / 86400);//整数部分代表的是天；一天有24*60*60=86400秒 ；#}
+{#        second = second % 86400;//余数代表剩下的秒数；#}
+{#        var hour = Math.floor(second / 3600);//整数部分代表小时；#}
+{#        second %= 3600; //余数代表 剩下的秒数；#}
+{#        var minute = Math.floor(second / 60);#}
+{#        second %= 60;#}
+{#        var str = tow(hour) + '<span class="time">小时</span>'#}
+{#            + tow(minute) + '<span class="time">分钟</span>'#}
+{#            + tow(second) + '<span class="time">秒</span>';#}
+{#        oSpan.innerHTML = str;#}
+{#    }#}
+{#    getDate();#}
+{#    setInterval(getDate, 1000);#}
+{#</script>#}
+{#<script>#}
+{#    var oSpan = document.getElementById('12124');#}
+{#    function tow(n) {#}
+{#        if (n < 0) {#}
+{#            return "00"#}
+{#        }#}
+{#        return n >= 0 && n < 10 ? '0' + n : '' + n;#}
+{#    }#}
+{##}
+{#    function getDate() {#}
+{#        var oDate = new Date();//获取日期对象#}
+{#        var oldTime = oDate.getTime();//现在距离1970年的毫秒数#}
+{#        var newDate = new Date('2020/1/04 00:00:00');#}
+{#        var newTime = newDate.getTime();//2019年距离1970年的毫秒数#}
+{#        var second = Math.floor((newTime - oldTime) / 1000);//未来时间距离现在的秒数#}
+{#        var day = Math.floor(second / 86400);//整数部分代表的是天；一天有24*60*60=86400秒 ；#}
+{#        second = second % 86400;//余数代表剩下的秒数；#}
+{#        var hour = Math.floor(second / 3600);//整数部分代表小时；#}
+{#        second %= 3600; //余数代表 剩下的秒数；#}
+{#        var minute = Math.floor(second / 60);#}
+{#        second %= 60;#}
+{#        var str = tow(hour) + '<span class="time">小时</span>'#}
+{#            + tow(minute) + '<span class="time">分钟</span>'#}
+{#            + tow(second) + '<span class="time">秒</span>';#}
+{#        oSpan.innerHTML = str;#}
+{#    }#}
+{#    getDate();#}
+{#    setInterval(getDate, 1000);#}
+{#</script>#}
+{#</body>#}
+{#</html>#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+</head>
+<body>
+
+<div id="timer0" style="color:red"></div>
+<div id="timer1" style="color:red"></div>
+<div id="timer2" style="color:red"></div>
+<div id="timer3" style="color:red"></div>
+</body>
+<script>
+    function tow(n) {
+        if (n < 0) {
+            return "00"
+        }
+        return n >= 0 && n < 10 ? '0' + n : '' + n;
+    }
+
+    function countDown(maxtime, fn) {
+        var timer = setInterval(function () {
+            if (!!maxtime) {
+                var day = Math.floor(maxtime / 86400),
+                    hour = Math.floor((maxtime % 86400) / 3600),
+                    minutes = Math.floor((maxtime % 3600) / 60),
+                    seconds = Math.floor(maxtime % 60),
+                    msg = tow(day) + " Days " + tow(hour) + " Hours " + tow(minutes) + " Minutes " + tow(seconds) + " Seconds till the end.";
+                fn(msg);
+                --maxtime;
+            } else {
+                clearInterval(timer);
+                fn("00 Days 00 Hours 00 Minutes 00 Seconds till the end");
+            }
+        }, 1000);
+    }
+
+    var aTime = [10, 3800, 3900, 100];
+    for (var i = 0; i < aTime.length; i++) {
+        (function () {
+            var obj = 'timer' + i;
+            countDown(aTime[i], function (msg) {
+                document.getElementById(obj).innerHTML = msg;
+            })
+        })()
+    }
+
+
+</script>
+<script type="text/javascript">
+    function myfun() {
+        alert("this window.onload");
+    }
+
+    /*用window.onload调用myfun()*/
+    window.onload = myfun;//不要括号
+</script>
+</html>

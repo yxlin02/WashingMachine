@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class=" " style="font-size: 100px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Washing Machine System</title>
+    <link href="../static/css/indexcss.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../static/css/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/jedate.css">
+</head>
+<body background="../static/images/bg.jpg">
+<div style="width: 100%;height: 100%"><!---->
+    <div style="color: white;padding: 10px;background-color: gray">
+        <span style="font-size: 20px">Washing Machine System</span>
+        <span style="margin-right: 20px;float: right">
+            <span><a href="/subscribe_"> Appointment</a></span>
+            <span style="margin-left: 20px">{{ session.get("user") }}</span>
+            <span style="margin-left: 20px"><a href="/exit">Quit</a></span>
+        </span>
+    </div>
+    <div style="margin-top: 50px">
+        <div class="jebody">
+            <div class="jewarp" style="float: left">
+                <h3 class="gray">WM R1-14 Up 1
+                    <span style="float: right;padding-right: 20px;color: #ff0000">
+                        {% if k_x[0]==0 %}
+                            {% if session.get("washingID")==0 %}
+                                <span style="color: #00a854">Free&nbsp;&nbsp;</span>
+                                <a href="/borrow?id={{ idx[0] }}">Use Washing Machine</a>
+                            {% endif %}
+                            {% if session.get("washingID")!=0 %}
+                                <span style="color: #00a854">Free&nbsp;&nbsp;</span>
+                            {% endif %}
+                        {% endif %}
+                        {% if k_x[0]!=0 %}
+                            {% if idx[0]==session.get("washingID") %}
+                                In use&nbsp;&nbsp;<a href="/still?id={{ idx[0] }}">Finish Washing</a>
+                            {% endif %}
+                            {% if idx[0]!=session.get("washingID") %}
+                                In use
+                            {% endif %}
+                        {% endif %}
+                    </span>
+                </h3>
+                <div class="content">
+                    <img src="../static/images/141.png" style="height: 500px"/>
+                    <div style="color: white;height: 25px">
+                        {% if k_x[0]!=0 %}
+                            <div style="float: left;padding-left: 10px "> User:{{ user_id[0] }}</div>
+                            <span style="float: right;padding-right: 10px;" id="time1"></span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jebody">
+            <div class="jewarp" style="float: right">
+                <h3 class="gray">WM R1-14 Up 2
+                    <span style="float: right;padding-right: 20px;color: red">
+                        {% if k_x[1]==0 %}
+                            {% if session.get("washingID")==0 %}
+                                <span style="color: #00a854">Free&nbsp;&nbsp;</span>
+                                <a href="/borrow?id={{ idx[1] }}">Use Washing Machine</a>
+                            {% endif %}
+                            {% if session.get("washingID")!=0 %}
+                                <span style="color: #00a854">Free&nbsp;&nbsp;</span>
+                            {% endif %}
+                        {% endif %}
+                        {% if k_x[1]!=0 %}
+                            {% if idx[1]==session.get("washingID") %}
+                                In use&nbsp;&nbsp;<a href="/still?id={{ idx[1] }}">Finish Washing</a>
+                            {% endif %}
+                            {% if idx[1]!=session.get("washingID") %}
+                                In use
+                            {% endif %}
+                        {% endif %}
+                    </span>
+                </h3>
+                <div class="content">
+                    <img src="../static/images/142.png" style="height: 500px"/>
+                    <div style="color: white;height: 25px">
+                        {% if k_x[1]!=0 %}
+                            <div style="float: left;padding-left: 10px "> User:{{ user_id[1] }}</div>
+                            <span style="float: right;padding-right: 10px;" id="time2"></span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jebody">
+            <div class="jewarp" style="float: left">
+                <h3 class="gray">WM R1-14 Down
+                    <span style="float: right;padding-right: 20px;color: red">
+                        {% if k_x[2]==0 %}
+                            {% if session.get("washingID")==0 %}
+                                <span style="color: #00a854">Free&nbsp;&nbsp;</span>
+                                <a href="/borrow?id={{ idx[2] }}">Use Washing Machine</a>
+                            {% endif %}
+                            {% if session.get("washingID")!=0 %}
+                                <span style="color: #00a854">Free&nbsp;&nbsp;</span>
+                            {% endif %}
+                        {% endif %}
+                        {% if k_x[2]!=0 %}
+                            {% if idx[2]==session.get("washingID") %}
+                                In use&nbsp;&nbsp;<a href="/still?id={{ idx[2] }}">Finish Washing</a>
+                            {% endif %}
+                            {% if idx[2]!=session.get("washingID") %}
+                                In use
+                            {% endif %}
+                        {% endif %}
+                    </span>
+                </h3>
+                <div class="content">
+                    <img src="../static/images/143.png" style="height: 500px"/>
+                    <div style="color: white;height: 25px">
+                        {% if k_x[2]!=0 %}
+                            <div style="float: left;padding-left: 10px "> User:{{ user_id[2] }}</div>
+                            <span style="float: right;padding-right: 10px;" id="time3"></span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jebody">
+            <div class="jewarp" style="float: right">
+                <h3 class="gray">WM R1-15 Down
+                    <span style="float: right;padding-right: 20px;color: red">
+                        {% if k_x[3]==0 %}
+                            {% if session.get("washingID")==0 %}
+                                <span style="color: #00a854">Free&nbsp;&nbsp;</span>
+                                <a href="/borrow?id={{ idx[3] }}">Use Washing Machine</a>
+                            {% endif %}
+                            {% if session.get("washingID")!=0 %}
+                                <span style="color: #00a854">Free&nbsp;&nbsp;</span>
+                            {% endif %}
+                        {% endif %}
+                        {% if k_x[3]!=0 %}
+                            {% if idx[3]==session.get("washingID") %}
+                                In use&nbsp;&nbsp;<a href="/still?id={{ idx[3] }}">Finish Washing</a>
+                            {% endif %}
+                            {% if idx[3]!=session.get("washingID") %}
+                                In use
+                            {% endif %}
+                        {% endif %}
+                    </span>
+                </h3>
+                <div class="content">
+                    <img src="../static/images/15.png" style="height: 500px"/>
+                    <div style="color: white;height: 25px">
+                        {% if k_x[3]!=0 %}
+                            <div style="float: left;padding-left: 10px "> User:{{ user_id[3] }}</div>
+                            <span style="float: right;padding-right: 10px;" id="time4"></span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function tow(n) {
+        if (n <= 0) {
+            return "00"
+        }
+        return n >= 0 && n < 10 ? '0' + n : '' + n;
+    }
+
+    function countDown(maxtime, fn) {
+        var timer = setInterval(function () {
+            if (!!maxtime) {
+                var day = Math.floor(maxtime / 86400),
+                    hour = Math.floor((maxtime % 86400) / 3600),
+                    minutes = Math.floor((maxtime % 3600) / 60),
+                    seconds = Math.floor(maxtime % 60),
+                    msg = "Time Remain:&nbsp;&nbsp;" + tow(hour) + ":" + tow(minutes) + ":" + tow(seconds);
+                fn(msg);
+                --maxtime;
+            } else {
+                clearInterval(timer);
+                fn("Time Remain:&nbsp;&nbsp;00:00:00");
+            }
+        }, 1000);
+    }
+
+    var aTime = {{ time_ }};
+    for (var i = 0; i < aTime.length; i++) {
+        (function (i) {
+            var obj = 'time' + (i + 1);
+            countDown(aTime[i], function (msg) {
+                document.getElementById(obj).innerHTML = msg;
+            })
+        })(i)
+    }
+
+
+</script>
+</html>
