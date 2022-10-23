@@ -5,8 +5,8 @@ from email.mime.text import MIMEText
 def send_email(to_email):
     try:
         mailserver = 'smtp.gmail.com'  # 邮箱服务器地址
-        username_send = 'hibiyakoumi@gmail.com'  # 邮箱用户名
-        password = 'jvusvkxgfmqwjcec'  # 邮箱密码：需要使用授权码
+        username_send = ''  # 邮箱用户名
+        password = ''  # 邮箱密码：需要使用授权码
         username_recv = to_email  # '1565172273@qq.com'  # 收件人，多个收件人用逗号隔开
         mail = MIMEText('''{},you are receiving this email because of the following reason: 1) Your laundry is complete. Please take your clothes out and checkout the washing machine ASAP. 2) You have booked an appointment. It is the time to do your laundry!'''.format(to_email))
         mail['Subject'] = 'Washing Machine Needs Operation'
